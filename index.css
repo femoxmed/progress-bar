@@ -1,0 +1,85 @@
+body {
+    box-sizing: border-box;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 10px;
+}
+
+.progress {
+    width: 400px;
+    height: 15px;
+    background-color: #d5d5d5;
+    border-radius: 100vw;
+    position: relative;
+    padding: 1px;
+}
+
+.progress-bar {
+    background: linear-gradient(135deg, rgba(255,255,255, .5) 25%, transparent 25%, transparent 50%, rgba(255,255,255, .5) 50%, rgba(255,255,255, .5) 75%, transparent 75%, transparent);
+    background-size: 15px;
+    border-radius: 100vw;
+    width: 50%;
+    animation: move 0.5s linear infinite;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5), 1px 2px 1px rgba(255,255,255, .5) inset; 
+}
+
+.progress-value {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    font-size: .75em;
+}
+
+.a {
+    background-color: #BEE47E;
+    height: 100%;
+}
+.b {
+    background-color: #FB7865;
+    height: 100%;
+}
+.c{
+    background-color: #EDEDED;
+    height: 100%;
+}
+.d{
+    background-color: #A0D3F2;
+    height: 100%;
+}
+.e{
+    background-color: #FFDB81;
+    height: 100%;
+}
+
+
+.btn {
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    display: block;
+    margin: 10px auto;
+    padding: 16px 8px;
+    width: 150px;
+    transition: .5s ease;
+
+}
+.btn:hover {
+    /* background-color: rgba(0, 0, 0, .5); */
+    background-color: transparent;
+    color:  black;
+}
+
+
+@keyframes move {
+    100% {
+        background-position: 15px 0px;
+    }
+}
